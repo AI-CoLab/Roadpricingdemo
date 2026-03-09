@@ -45,6 +45,13 @@ COLORS = {
 }
 
 
+def _hex_to_rgba(hex_color: str, alpha: float) -> str:
+    """Convert '#rrggbb' to 'rgba(r,g,b,a)' for Plotly compatibility."""
+    h = hex_color.lstrip("#")
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f"rgba({r},{g},{b},{alpha})"
+
+
 # ═══════════════════════════════════════════════════════════════════════════
 # SIDEBAR — Controls
 # ═══════════════════════════════════════════════════════════════════════════
@@ -375,7 +382,7 @@ with tab_tradeoffs:
             name=row["regime"],
             line=dict(color=COLORS[row["regime"]], width=2.5),
             fill="toself",
-            fillcolor=COLORS[row["regime"]] + "18",
+            fillcolor=_hex_to_rgba(COLORS[row["regime"]], 0.09),
         ))
 
     fig_radar.update_layout(
@@ -699,7 +706,7 @@ with tab_data:
     st.subheader("Full Simulation Results")
     st.dataframe(df_display, use_container_width=True, hide_index=True)
 
-    csv = df[export_cols].to_csv(index=False) if "export_cols" in dir() else df.to_csv(index=False)
+    csv = df.to_csv(index=False)
     st.download_button("Download results as CSV", csv, "simulation_results.csv", "text/csv")
 
     st.markdown("---")
