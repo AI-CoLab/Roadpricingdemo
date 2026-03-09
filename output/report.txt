@@ -1,0 +1,229 @@
+==========================================================================
+  AUSTRALIAN ROAD PRICING: A SIMULATION OF ALTERNATIVE FUTURES
+  Fleet year: 2026  |  All values in 2024 AUD
+==========================================================================
+
+──────────────────────────────────────────────────────────────────────────
+  1. THE CASE FOR REFORM: WHY THE STATUS QUO IS UNSUSTAINABLE
+──────────────────────────────────────────────────────────────────────────
+
+Australia's road funding model is built on fuel excise — a tax designed for a
+century of internal combustion engines. As the fleet electrifies, this
+revenue base is eroding at ~4% per year. By 2035, fuel excise could fall
+below $6 billion annually while road maintenance needs continue to grow.
+
+Meanwhile, congestion costs Australian capitals an estimated $19 billion per
+year, with no price signal to manage demand. Electric vehicles — which cause
+the same road wear and congestion as their ICE counterparts — contribute zero
+fuel excise. The current system fails on three fronts:
+
+  (a) Revenue adequacy: spending already exceeds hypothecated revenue
+  (b) Efficiency: no signal to reduce congestion or optimise road use
+  (c) Equity: EVs (disproportionately owned by higher-income households)
+      free-ride on infrastructure funded by ICE drivers
+
+The question is not whether to reform, but how.
+
+──────────────────────────────────────────────────────────────────────────
+  2. THEORETICAL FOUNDATIONS
+──────────────────────────────────────────────────────────────────────────
+
+This simulation is grounded in six bodies of economic theory, each offering
+a different lens on what road pricing should achieve:
+
+
+======================================================================
+  Pigouvian Taxation  (Arthur Pigou (1920))
+======================================================================
+  Principle: Road users impose external costs (congestion, pollution, accidents, noise) on others that are not reflected in their private costs. A Pigouvian tax sets the charge equal to the marginal external cost, internalising the externality so that users face the true social cost of their trip.
+  Implication: Charges should vary by time, location, and vehicle type to reflect the actual externality imposed. A diesel truck on a congested urban arterial at peak hour imposes far greater external costs than an EV on a rural highway at midnight.
+
+======================================================================
+  Ramsey Pricing  (Frank Ramsey (1927))
+======================================================================
+  Principle: When a provider must recover fixed costs, prices should be set inversely proportional to demand elasticity. Users with fewer alternatives (inelastic demand) pay more; those with options (elastic demand) pay less. This minimises deadweight loss while meeting a revenue target.
+  Implication: Freight operators with fixed schedules and few modal alternatives would face higher charges than discretionary leisure drivers. Politically contentious but economically efficient for cost recovery.
+
+======================================================================
+  Vickrey Congestion Pricing  (William Vickrey (1963, 1969))
+======================================================================
+  Principle: Congestion arises because road space is unpriced at peak times. A time-varying toll that rises as congestion builds and falls as it dissipates can spread demand across time, reducing peak congestion without necessarily reducing total travel. The optimal toll equals the marginal delay cost imposed on all other users.
+  Implication: Requires real-time or predictive pricing signals. Most effective on bottleneck corridors. Stockholm and Singapore provide empirical support: peak traffic can fall 15-25%% with well-designed congestion charges.
+
+======================================================================
+  Road Cost Recovery / User-Pays  (Public finance tradition; Henry Tax Review (2010))
+======================================================================
+  Principle: Road infrastructure is a capital asset. Users should pay for the wear and tear they cause and a fair share of capital costs, analogous to utility pricing. The fourth-power law means heavy vehicles cause disproportionate pavement damage relative to their share of traffic.
+  Implication: Favours weight-distance charges. Australia's current fuel excise acts as a crude proxy but breaks down as the fleet electrifies: EVs cause the same road wear but pay zero fuel excise. A mass-distance charge restores the user-pays link.
+
+======================================================================
+  Equity and Accessibility  (Social welfare economics; Rawlsian justice)
+======================================================================
+  Principle: Transport is a derived demand essential for accessing employment, education, and healthcare. Pricing must consider distributional impacts: lower-income households spend a higher share of income on transport, often live in car-dependent outer suburbs, and have fewer modal alternatives.
+  Implication: Any pricing scheme needs complementary measures — public transport investment, concession caps, or revenue recycling — to avoid regressive outcomes. Pure efficiency pricing without equity safeguards is unlikely to be politically sustainable.
+
+======================================================================
+  Second-Best Pricing  (Lipsey & Lancaster (1956); Small & Verhoef (2007))
+======================================================================
+  Principle: First-best (Pigouvian) pricing is rarely achievable due to political, technological, and institutional constraints. Second-best approaches approximate the ideal within practical limits — e.g., cordon charges instead of full network pricing, or flat per-km rates instead of real-time marginal cost pricing.
+  Implication: The 'perfect' scheme is the enemy of the good. Simpler schemes that capture most of the welfare gains with lower transaction and political costs may be preferable. The simulation explores this trade-off.
+
+No single theory provides a complete answer. The tension between Pigouvian
+efficiency (charge the full external cost) and equity concerns (protect
+vulnerable users) is a genuine trade-off, not a solvable optimisation problem.
+The simulation quantifies these tensions.
+
+──────────────────────────────────────────────────────────────────────────
+  3. SIMULATION RESULTS: SEVEN REGIMES COMPARED
+──────────────────────────────────────────────────────────────────────────
+
+  Key Metrics by Regime:
+  ----------------------------------------------------------------------
+  Regime                  Revenue   VKT Chg      CO₂  Cong.Cost  $/km Car   $/km HV
+  ----------------------------------------------------------------------
+  Status Quo           $    33.2B    +0.0%   73.5Mt $     3.3B $  0.109 $  0.302
+  Flat Distance        $     7.7B   +17.0%   84.1Mt $     3.8B $  0.025 $  0.025
+  Congestion           $     9.5B   +15.1%   83.1Mt $     3.5B $  0.031 $  0.033
+  Cordon               $    13.1B   +10.5%   80.5Mt $     2.9B $  0.043 $  0.053
+  Weight-Distance      $    62.9B   +12.7%   72.4Mt $     3.7B $  0.022 $  4.237
+  Externality          $   142.3B   -21.2%   58.1Mt $     1.7B $  0.643 $  1.007
+  Hybrid               $    11.4B   +14.6%   82.4Mt $     3.6B $  0.032 $  0.099
+  ----------------------------------------------------------------------
+
+──────────────────────────────────────────────────────────────────────────
+  4. REGIME-BY-REGIME ANALYSIS
+──────────────────────────────────────────────────────────────────────────
+
+  ▸ Status Quo (Fuel Excise + Registration)
+  ········································
+    Revenue: $33.2B | Congestion cost: $3.3B | CO₂: 73.5Mt
+
+    The baseline. Fuel excise provides a rough proxy for road use,
+    but its effectiveness diminishes each year as EVs grow. Registration
+    fees bear no relation to actual road use. Congestion is entirely
+    unpriced outside a handful of toll roads.
+
+  ▸ Flat Distance-Based Charge
+  ········································
+    Revenue: $7.7B (-25.5B vs Status Quo) | VKT change: +17.0%
+    Congestion cost: $3.8B (0.6B higher) | CO₂: 84.1Mt (10.6Mt higher)
+    Avg car charge: $0.025/km | Avg heavy vehicle: $0.025/km
+    Urban revenue share: 59% | Rural: 41%
+
+  ▸ Time-of-Day Congestion Charge
+  ········································
+    Revenue: $9.5B (-23.7B vs Status Quo) | VKT change: +15.1%
+    Congestion cost: $3.5B (0.2B higher) | CO₂: 83.1Mt (9.6Mt higher)
+    Avg car charge: $0.031/km | Avg heavy vehicle: $0.033/km
+    Urban revenue share: 80% | Rural: 20%
+
+  ▸ CBD Cordon Charge
+  ········································
+    Revenue: $13.1B (-20.2B vs Status Quo) | VKT change: +10.5%
+    Congestion cost: $2.9B (0.3B lower) | CO₂: 80.5Mt (7.0Mt higher)
+    Avg car charge: $0.043/km | Avg heavy vehicle: $0.053/km
+    Urban revenue share: 100% | Rural: 0%
+
+  ▸ Weight-Distance Charge
+  ········································
+    Revenue: $62.9B (+29.6B vs Status Quo) | VKT change: +12.7%
+    Congestion cost: $3.7B (0.4B higher) | CO₂: 72.4Mt (1.0Mt lower)
+    Avg car charge: $0.022/km | Avg heavy vehicle: $4.237/km
+    Urban revenue share: 59% | Rural: 41%
+
+  ▸ Full Externality-Weighted Charge
+  ········································
+    Revenue: $142.3B (+109.1B vs Status Quo) | VKT change: -21.2%
+    Congestion cost: $1.7B (1.6B lower) | CO₂: 58.1Mt (15.4Mt lower)
+    Avg car charge: $0.643/km | Avg heavy vehicle: $1.007/km
+    Urban revenue share: 93% | Rural: 7%
+
+  ▸ Hybrid Reform Package
+  ········································
+    Revenue: $11.4B (-21.8B vs Status Quo) | VKT change: +14.6%
+    Congestion cost: $3.6B (0.3B higher) | CO₂: 82.4Mt (8.9Mt higher)
+    Avg car charge: $0.032/km | Avg heavy vehicle: $0.099/km
+    Urban revenue share: 67% | Rural: 33%
+
+──────────────────────────────────────────────────────────────────────────
+  5. THE INESCAPABLE TRADE-OFFS
+──────────────────────────────────────────────────────────────────────────
+
+    REVENUE CHAMPION: Externality
+      Generates $142.3B — but at what cost to mobility
+      and equity? High charges reduce demand by -21.2%.
+
+    CONGESTION CHAMPION: Externality
+      Achieves the lowest congestion cost at $1.7B
+      — but is complex to administer and politically contentious.
+
+    EMISSIONS CHAMPION: Externality
+      Produces the lowest CO₂ at 58.1Mt — through a combination
+      of demand reduction and incentivising lower-emission vehicles.
+
+    LEAST DISRUPTIVE: Status Quo
+      Smallest demand impact at +0.0% VKT change
+      — but this also means the least congestion and emissions benefit.
+
+    The fundamental insight: no regime wins on every dimension. Choosing a
+    pricing model is choosing which objectives to prioritise and which
+    trade-offs to accept. The simulation quantifies these trade-offs so
+    the choice can be made with open eyes.
+
+
+──────────────────────────────────────────────────────────────────────────
+  6. LOOKING AHEAD: THE 2030 FLEET
+──────────────────────────────────────────────────────────────────────────
+
+    By 2030, Australia's passenger BEV fleet is projected to grow from ~320,000
+    to ~1.9 million vehicles. PHEVs will triple. The fuel excise gap widens
+    dramatically. Under the Status Quo:
+
+      • Fuel excise revenue falls by a further ~$2-3B per year
+      • Road wear from heavier EVs continues unpriced
+      • Congestion worsens as total VKT grows ~1.5% annually
+
+    Every pricing regime becomes MORE advantageous relative to the Status Quo
+    over time, simply because the Status Quo deteriorates. The cost of inaction
+    compounds. A regime that looks only marginally better today may represent
+    billions in cumulative benefit over a decade.
+
+──────────────────────────────────────────────────────────────────────────
+  7. IMPLICATIONS — WITHOUT PRESCRIPTION
+──────────────────────────────────────────────────────────────────────────
+
+    This simulation deliberately avoids recommending a single regime. Instead,
+    it surfaces the value judgements that any decision must confront:
+
+    1. REVENUE vs FREEDOM: Higher charges generate more revenue but restrict
+       mobility. How much should government manage travel demand through price?
+
+    2. EFFICIENCY vs EQUITY: Congestion pricing is economically optimal but
+       hits shift workers, parents, and outer-suburban commuters hardest.
+       Is efficiency worth the distributional cost?
+
+    3. SIMPLICITY vs PRECISION: A flat per-km charge is easy to understand
+       and administer but leaves congestion unpriced. Full externality pricing
+       captures every dimension but is fiendishly complex. Where on this
+       spectrum is the right landing point?
+
+    4. FREIGHT vs PASSENGER: Heavy vehicles cause massively disproportionate
+       road damage. Pricing this accurately is fair but raises freight costs —
+       which flow through to consumer prices. How much of road wear should
+       freight pay for directly?
+
+    5. TRANSITION vs DISRUPTION: Gradual reform (e.g., per-km charge for
+       new EVs only) minimises political resistance but delays benefits.
+       Comprehensive reform is faster but more disruptive. What pace of
+       change is acceptable?
+
+    6. TECHNOLOGY NEUTRALITY: Should the pricing system be indifferent to
+       powertrain type (charging ICE and BEV equally per km), or should it
+       reward lower-emission vehicles? Each approach has merit.
+
+    These are ultimately political and ethical choices, not technical ones.
+    The simulation provides the evidence base; the values are yours.
+
+==========================================================================
+  END OF REPORT
+==========================================================================

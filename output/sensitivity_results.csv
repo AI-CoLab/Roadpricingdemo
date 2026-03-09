@@ -1,0 +1,19 @@
+param_name,param_value,regime,revenue_bn,vkt_change_pct,co2_mt,congestion_cost_bn
+Peak Multiplier,2.0000,Congestion,7.4873,17.4156,84.3415,3.6944
+Peak Multiplier,3.0000,Congestion,8.5566,16.2757,83.7150,3.5741
+Peak Multiplier,4.0000,Congestion,9.4979,15.1390,83.0886,3.4542
+Peak Multiplier,5.0000,Congestion,10.3193,14.0311,82.4621,3.3382
+Peak Multiplier,6.0000,Congestion,11.0169,12.9265,81.8364,3.2227
+Peak Multiplier,8.0000,Congestion,12.0636,10.7756,80.5946,2.9972
+Per-km Rate,0.0100,Flat Distance,3.2005,21.4262,86.5443,3.9561
+Per-km Rate,0.0200,Flat Distance,6.2451,18.4689,84.9219,3.8647
+Per-km Rate,0.0250,Flat Distance,7.7089,16.9903,84.1107,3.8190
+Per-km Rate,0.0300,Flat Distance,9.1338,15.5117,83.2996,3.7732
+Per-km Rate,0.0400,Flat Distance,11.8666,12.5545,81.6772,3.6818
+Per-km Rate,0.0600,Flat Distance,16.8646,6.6400,78.4325,3.4990
+Peak Surcharge,0.0200,Hybrid,10.4206,15.6934,82.9858,3.7077
+Peak Surcharge,0.0300,Hybrid,10.9313,15.1443,82.6842,3.6552
+Peak Surcharge,0.0400,Hybrid,11.4131,14.5952,82.3825,3.6027
+Peak Surcharge,0.0600,Hybrid,12.2898,13.4971,81.7792,3.4977
+Peak Surcharge,0.0800,Hybrid,13.0587,12.4277,81.1759,3.3954
+Peak Surcharge,0.1000,Hybrid,13.7187,11.3699,80.5726,3.2943

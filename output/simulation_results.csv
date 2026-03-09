@@ -1,0 +1,8 @@
+regime,regime_full,revenue_bn,vkt_bn,vkt_post_bn,vkt_change_pct,co2_mt,congestion_cost_bn,externality_cost_bn,avg_passenger_charge_per_km,avg_hv_charge_per_km,urban_revenue_share,rural_revenue_share,peak_revenue_share
+Status Quo,Status Quo (Fuel Excise + Registration),33.2477,263.5750,263.5750,0.0000,73.4722,3.2541,23.4482,0.1087,0.3022,70.7012,29.2988,33.9888
+Flat Distance,Flat Distance-Based Charge,7.7089,263.5750,308.3572,16.9903,84.1107,3.8190,26.7713,0.0250,0.0250,59.2762,40.7238,33.9888
+Congestion,Time-of-Day Congestion Charge,9.4979,263.5750,303.4777,15.1390,83.0886,3.4542,26.4128,0.0309,0.0327,79.6094,20.3906,54.6923
+Cordon,CBD Cordon Charge,13.0930,263.5750,291.2456,10.4982,80.4519,2.9273,25.5312,0.0428,0.0525,100.0000,0.0000,40.2886
+Weight-Distance,Weight-Distance Charge,62.8750,263.5750,296.9370,12.6575,72.4269,3.6806,22.6633,0.0217,4.2369,59.4372,40.5628,33.9888
+Externality,Full Externality-Weighted Charge,142.3183,263.5750,207.6566,-21.2154,58.0529,1.6767,18.3275,0.6435,1.0067,93.4403,6.5597,50.2023
+Hybrid,Hybrid Reform Package,11.4131,263.5750,302.0444,14.5952,82.3825,3.6027,26.1994,0.0323,0.0994,66.7498,33.2502,46.1394
